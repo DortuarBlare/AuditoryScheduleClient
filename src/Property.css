@@ -1,0 +1,20 @@
+.property {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.property-title {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    /*Кривая табуляция*/
+    /*display: block;
+    flex: 1 1 auto;
+    margin: 0 5px;*/
+}
+
+.property-value {
+    color: white;
+}

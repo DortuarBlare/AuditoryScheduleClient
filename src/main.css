@@ -1,0 +1,56 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #6fe2ec;
+}
+
+.card {
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 600px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgb(170, 170, 170);
+    background-color: #3a7d87;
+}
+
+.button {
+    height: 35px;
+    border-radius: 10px;
+    min-width: 90px;
+    color: white;
+    background-color: #3a7d87;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none
+}
+
+.buttonRed {
+    background-color: #921719;
+}
+
+.buttonGreen {
+    background-color: seagreen;
+}
+
+.buttonDarkBlue {
+    background-color: #20525A;
+}
+
+.button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 2px black;
+}
+
+input[type=text], input[type=number] {
+    padding: 3px 3px;
+    font-size: 14px;
+}
+
+select {
+    min-width: 200px;
+    font-size: 14px;
+    overflow-y: auto;
+}

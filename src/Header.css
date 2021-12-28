@@ -1,0 +1,36 @@
+.header-outer {
+    margin: auto;
+    max-width: 1200px;
+    height: 150px;
+    background-color: #3a7d87;
+    display: flex;
+    margin-bottom: 20px;
+    font-family: Gill Sans, sans-serif;
+    font-size: 240%;
+    font-weight: bold;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.header-title {
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.header-line {
+    border-left: 2px solid white;
+    height: 30px;
+    width: 1px;
+}
+
+.header-links {
+    display: flex;
+    gap: 15px;
+}
+
+.header-link {
+    color: white;
+    font-size: x-large;
+    text-decoration: none;
+}

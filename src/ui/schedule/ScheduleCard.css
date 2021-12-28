@@ -1,0 +1,17 @@
+.schedule-card {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.schedule-card-main {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.schedule-card-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
