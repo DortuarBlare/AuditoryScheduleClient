@@ -6,7 +6,7 @@ import '../schedule/ScheduleForm.css'
 
 interface Props {
     auditory?: AuditoryResponse
-    onSubmit: (auditory: AuditoryRequest) => void
+    onSubmit: (auditoryID: number | undefined, auditory: AuditoryRequest) => void
 }
 
 export const AuditoryForm: React.FC<Props> = ({auditory, onSubmit}) => {
@@ -14,7 +14,7 @@ export const AuditoryForm: React.FC<Props> = ({auditory, onSubmit}) => {
 
     const onClick = () => {
         if (isAuditory === '') return
-        onSubmit({auditoryName: isAuditory})
+        onSubmit(auditory?.id, {auditoryName: isAuditory})
     }
 
     return (

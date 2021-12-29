@@ -8,8 +8,8 @@ import {GroupResponse} from "../../api/entity/response/GroupResponse";
 import './ScheduleForm.css'
 
 interface Props {
-    schedule?: ScheduleRequest
-    onSubmit: (schedule: ScheduleRequest) => void
+    schedule?: ScheduleResponse
+    onSubmit: (scheduleID: number | undefined, schedule: ScheduleRequest) => void
 }
 
 export const ScheduleForm: React.FC<Props> = ({ schedule, onSubmit }) => {
@@ -24,19 +24,15 @@ export const ScheduleForm: React.FC<Props> = ({ schedule, onSubmit }) => {
     const [startTime_, setStartTime_] = useState(schedule?.time.startTime ?? '')
     const [endTime_, setEndTime_] = useState(schedule?.time.endTime ?? '')
 
-    const refresh = () => {
+    useEffect(() => {
         getScheduleList().then(res => setIsSchedule(res))
         getGroupList().then(res => setIsGroup(res))
-        return getAuditoryList().then(res => setIsAuditory(res))
-    }
-
-    useEffect(() => {
-        refresh()
+        getAuditoryList().then(res => setIsAuditory(res))
     },[])
 
     const onClick = () => {
         if (week == 0 || day_ === '' || startTime_ === '' || endTime_ === '' || auditory === '' || group === '') return
-        onSubmit({
+        onSubmit(schedule?.id,{
             auditory: { auditoryName: auditory ?? '' },
             group: { groupName: group ?? '' },
             week,

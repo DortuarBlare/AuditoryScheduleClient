@@ -26,6 +26,7 @@ export function deleteAuditory(auditoryID: number) {
 }
 
 
+
 export function addGroup(group: GroupRequest): Promise<GroupResponse> {
     return api<GroupResponse>(URL_GET_POST_GROUP(), METHOD_POST(group) )
 }
@@ -43,6 +44,7 @@ export function deleteGroup(groupID: number) {
 }
 
 
+
 export function addSchedule(schedule: ScheduleRequest): Promise<ScheduleResponse> {
     return api<ScheduleResponse>(URL_SCHEDULE(), METHOD_POST(schedule) )
 }
@@ -52,7 +54,7 @@ export function getScheduleList(): Promise<Array<ScheduleResponse>> {
 }
 
 export function updateSchedule(scheduleID: number, schedule: ScheduleRequest): Promise<ScheduleResponse> {
-    return api(URL_DELETE_PUT_SCHEDULE(scheduleID), METHOD_PUT(schedule))
+    return api<ScheduleResponse>(URL_DELETE_PUT_SCHEDULE(scheduleID), METHOD_PUT(schedule))
 }
 
 export function deleteSchedule(scheduleID: number) {

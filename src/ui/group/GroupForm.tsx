@@ -6,7 +6,7 @@ import '../schedule/ScheduleForm.css'
 
 interface Props {
     group?: GroupResponse
-    onSubmit: (group: GroupRequest) => void
+    onSubmit: (groupID: number | undefined, group: GroupRequest) => void
 }
 
 export const GroupForm: React.FC<Props> = ({ group, onSubmit }) => {
@@ -14,7 +14,7 @@ export const GroupForm: React.FC<Props> = ({ group, onSubmit }) => {
 
     const onClick = () => {
         if (isGroup === '') return
-        onSubmit({groupName: isGroup})
+        onSubmit(group?.id, {groupName: isGroup})
     }
 
     return (

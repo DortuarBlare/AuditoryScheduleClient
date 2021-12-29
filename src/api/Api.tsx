@@ -23,7 +23,6 @@ export const METHOD_DELETE = (): any => {
 }
 
 export const METHOD_POST = (data: {}): any => {
-    console.log(JSON.stringify(data))
     return {
         method: 'POST',
         headers: {
